@@ -29,3 +29,13 @@ class KNearestPointsTest(unittest.TestCase):
 
         self.assertEqual(expected, actual)
 
+    def test_sort_list_of_points_from_vertex(self):
+        points = [[10,10], [1,2], [2,3]]
+        vertex = [1,2]
+
+        actual = driver.sort_points(vertex, points)
+        expected = [[1,2], [2,3], [10,10]]
+
+        self.assertEqual(expected, actual)
+
+

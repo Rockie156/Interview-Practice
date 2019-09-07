@@ -10,3 +10,8 @@ def get_distance(p1, p2):
     sum_squared_dist = x_squared_dist + y_squared_dist
 
     return sum_squared_dist ** .5
+
+
+def sort_points(vertex, points):
+    points.sort(key=lambda point: get_distance(vertex, point))
+    return points
