@@ -15,3 +15,7 @@ def get_distance(p1, p2):
 def sort_points(vertex, points):
     points.sort(key=lambda point: get_distance(vertex, point))
     return points
+
+
+def get_k_nearest_points(vertex, points, K):
+    return sort_points(vertex, points)[:K]

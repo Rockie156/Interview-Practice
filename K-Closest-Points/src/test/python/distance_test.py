@@ -38,4 +38,12 @@ class KNearestPointsTest(unittest.TestCase):
 
         self.assertEqual(expected, actual)
 
+    def get_k_nearest_points(self):
+        points = [[10,10], [1,2], [2,3]]
+        vertex = [1,2]
+        K = 2
 
+        actual = driver.get_k_nearest_points(vertex, points, k)
+        expected = [[1,2], [2,3]]
+
+        self.assertEqual(expected, actual)
