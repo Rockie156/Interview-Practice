@@ -20,3 +20,12 @@ class KNearestPointsTest(unittest.TestCase):
         expected = 1
 
         self.assertEqual(expected, actual)
+
+    def test_distance_from_1_0_to_3_1_is_sqrt_5(self):
+        vertex = [1,0]
+        point = [3,1]
+        actual = driver.get_distance(vertex, point)
+        expected = 5 ** .5
+
+        self.assertEqual(expected, actual)
+
